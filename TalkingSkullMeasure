@@ -14,16 +14,16 @@
  
  void setup() 
  { 
-   myservo.attach(9);  //attaches servo to 9th pin
+   servo1.attach(9);  //attaches servo to 9th pin
  } 
  
  void loop() 
  { 
    val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023) 
    val = map(val, 0, 1023, 0, 179);     // scale it to use it with the servo (value between 0 and 180) 
-   myservo.write(val);                  // sets the servo position according to the scaled value 
+   servo1.write(val);                  // sets the servo position according to the scaled value 
    delay(1000);                           // waits for the servo to move and so not constantly printing value
-   Serial.println(servo1.read());       //prints servo degree
+   Serial.println(servo1.read());
  }
  
  
